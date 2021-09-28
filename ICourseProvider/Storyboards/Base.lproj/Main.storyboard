@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Course ProviderVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ICourseProviderVC" customModule="ICourseProvider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 United States Dollar equals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NwT-r2-t7I">
+                                <rect key="frame" x="24" y="92" width="218" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1176470588" green="0.015686274510000001" blue="0.1019607843" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.86 Euro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLO-tD-20x">
+                                <rect key="frame" x="24" y="129" width="101.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Currency in USD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LTn-bQ-zzZ">
+                                <rect key="frame" x="24" y="174" width="366" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="editingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="P95-PX-Cas"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ICx-aX-yhD"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Currency in EUR" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VHu-bO-cbg">
+                                <rect key="frame" x="24" y="232" width="366" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="editingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="VXp-6s-KRh"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dkO-0z-iKD"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOj-Ys-FpO">
+                                <rect key="frame" x="326" y="232" width="64" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdp-xS-c0q">
+                                        <rect key="frame" x="17.5" y="8" width="29.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.1176470588" green="0.015686274510000001" blue="0.1019607843" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1176470588" green="0.015686274510000001" blue="0.1019607843" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="UEa-Gn-r3o"/>
+                                    <constraint firstItem="tdp-xS-c0q" firstAttribute="centerX" secondItem="OOj-Ys-FpO" secondAttribute="centerX" id="eBw-Ce-M7a"/>
+                                    <constraint firstItem="tdp-xS-c0q" firstAttribute="centerY" secondItem="OOj-Ys-FpO" secondAttribute="centerY" id="hDX-9K-fCR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z2h-La-su3">
+                                <rect key="frame" x="326" y="174" width="64" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O97-kv-7YA">
+                                        <rect key="frame" x="16.5" y="8" width="31" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.1176470588" green="0.015686274510000001" blue="0.1019607843" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1176470588" green="0.015686274510000001" blue="0.1019607843" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="O97-kv-7YA" firstAttribute="centerY" secondItem="z2h-La-su3" secondAttribute="centerY" id="3T7-lo-vk6"/>
+                                    <constraint firstAttribute="width" constant="64" id="8Io-VK-7hs"/>
+                                    <constraint firstItem="O97-kv-7YA" firstAttribute="centerX" secondItem="z2h-La-su3" secondAttribute="centerX" id="czs-N7-d6b"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LTn-bQ-zzZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="1rO-EG-gfj"/>
+                            <constraint firstItem="LTn-bQ-zzZ" firstAttribute="top" secondItem="uLO-tD-20x" secondAttribute="bottom" constant="16" id="3wk-EH-ZYk"/>
+                            <constraint firstItem="z2h-La-su3" firstAttribute="trailing" secondItem="LTn-bQ-zzZ" secondAttribute="trailing" id="4Vr-cq-iuw"/>
+                            <constraint firstItem="OOj-Ys-FpO" firstAttribute="top" secondItem="VHu-bO-cbg" secondAttribute="top" id="A5b-ij-1eR"/>
+                            <constraint firstItem="VHu-bO-cbg" firstAttribute="top" secondItem="LTn-bQ-zzZ" secondAttribute="bottom" constant="24" id="B97-g9-vuK"/>
+                            <constraint firstItem="z2h-La-su3" firstAttribute="bottom" secondItem="LTn-bQ-zzZ" secondAttribute="bottom" id="BXr-dV-QvA"/>
+                            <constraint firstItem="OOj-Ys-FpO" firstAttribute="trailing" secondItem="VHu-bO-cbg" secondAttribute="trailing" id="HSl-ga-rMw"/>
+                            <constraint firstItem="NwT-r2-t7I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="Hnv-eU-sWg"/>
+                            <constraint firstItem="OOj-Ys-FpO" firstAttribute="bottom" secondItem="VHu-bO-cbg" secondAttribute="bottom" id="KMY-lW-0x5"/>
+                            <constraint firstItem="uLO-tD-20x" firstAttribute="leading" secondItem="NwT-r2-t7I" secondAttribute="leading" id="LwG-xq-0cy"/>
+                            <constraint firstItem="VHu-bO-cbg" firstAttribute="leading" secondItem="LTn-bQ-zzZ" secondAttribute="leading" id="Tin-eb-KpZ"/>
+                            <constraint firstItem="VHu-bO-cbg" firstAttribute="trailing" secondItem="LTn-bQ-zzZ" secondAttribute="trailing" id="ZfO-ku-BTk"/>
+                            <constraint firstItem="z2h-La-su3" firstAttribute="top" secondItem="LTn-bQ-zzZ" secondAttribute="top" id="dgs-m1-OJb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LTn-bQ-zzZ" secondAttribute="trailing" constant="24" id="dp1-A6-KPz"/>
+                            <constraint firstItem="NwT-r2-t7I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="jlX-qy-rF3"/>
+                            <constraint firstItem="uLO-tD-20x" firstAttribute="top" secondItem="NwT-r2-t7I" secondAttribute="bottom" constant="16" id="xyy-48-LGE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblEcRate" destination="uLO-tD-20x" id="qUG-0t-055"/>
+                        <outlet property="txtEUR" destination="VHu-bO-cbg" id="rVs-Az-PFy"/>
+                        <outlet property="txtUSD" destination="LTn-bQ-zzZ" id="Z2u-gp-ZB5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
